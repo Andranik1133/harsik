@@ -1,0 +1,102 @@
+header {
+  background-image: url("../../assets/images/wedding-bg.webp");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .header__box {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .header__logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .header__title {
+      color: var(--color-white);
+      font-size: 4vw;
+      line-height: 1.7;
+    }
+
+    .header__subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: var(--color-white);
+      font-weight: 700;
+      letter-spacing: 5px;
+      width: 100%;
+      position: relative;
+    }
+
+    .header__subtitle::before {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      top: 50%;
+      left: 450px;
+      width: 120px;
+      height: 2px;
+      background-color: #fff;
+      z-index: -2;
+    }
+    .header__subtitle::after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      top: 50%;
+      right: 450px;
+      width: 120px;
+      height: 2px;
+      background-color: #fff;
+      z-index: -2;
+    }
+   
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+.header__box{
+ 
+  .header__subtitle::after,
+  .header__subtitle::before {
+    content: none;
+  }
+}
+
+.nav__icons-2 {
+  display: none;
+}
+   
+  }
+}
+
+// icons
+
+.nav__icons-2 {
+  position: absolute;
+  top: 45%;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.nav__icons-2 i {
+  font-size: 30px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background: var(--color-white);
+}

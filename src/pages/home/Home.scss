@@ -1,0 +1,130 @@
+.about__me {
+  display: flex;
+  width: 100%;
+  height: 567px;
+  box-shadow: 0px 15px 3px -15px #111;
+  height: 100%;
+  .about__image-box {
+    flex-basis: 50%;
+    .about__image {
+      height: 100%;
+      text-align: right;
+      object-position: right;
+    }
+  }
+
+  .about__subtitle {
+    flex-basis: 50%;
+    height: 100%;
+    padding: 60px 40px;
+    .about__text {
+      margin-bottom: 25px;
+      color: var(--color-bg-2);
+    }
+  }
+}
+
+// ============= About =============
+
+.picture {
+  background-image: url("../../assets/images/future-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 110vh;
+}
+
+// ============= contact =============
+
+.contact {
+  display: flex;
+
+  .contact__features {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+
+    .contact__title{
+      width: 300px;
+      text-align: center;
+    }
+
+    .contact__text {
+      line-height: 1.7em;
+      font-size: 13px;
+      color: var(--color-bg-2);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      width: 400px;
+      padding: 0 16px;
+      input {
+        border: 1px solid var(--color-bg-3);
+        padding: 8px 15px;
+        margin-bottom: 12px;
+        height: 40px;
+      }
+      input:hover {
+        border: 2px solid var(--color-bg-3);
+      }
+      textarea {
+        border: 1px solid var(--color-bg-3);
+        padding: 8px 15px;
+      }
+      textarea:hover {
+        border: 2px solid var(--color-bg-3);
+      }
+    }
+
+    .contact__btn {
+      width: 118px;
+      height: 30px;
+      color: var(--color-white);
+      background: transparent;
+      background-color: var(--color-bg-3);
+      cursor: pointer;
+      margin-top: 25px;
+      transition: var(--transition);
+    }
+    .contact__btn:hover {
+      color: var(--color-bg-2);
+      background: var(--color-bg-2);
+      color: var(--color-bg-1);
+    }
+  }
+
+  .contact__image {
+    flex-basis: 50%;
+    img {
+      object-position: left;
+    }
+  }
+}
+
+// ============= contact =============
+
+@media (max-width: 991px) {
+  .about__me {
+    display: block;
+
+    .about__subtitle {
+      height: 100%;
+    }
+    
+  }
+
+  // ----------
+
+  .contact {
+    flex-direction: column-reverse;
+
+    .contact__features {
+      justify-content: center;
+      align-items: center;
+      margin: 0 16px;
+    }
+  }
+}

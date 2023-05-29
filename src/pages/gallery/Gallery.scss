@@ -1,0 +1,14 @@
+.foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .images {
+    width: 30%;
+    height:auto;
+    border: 5px solid var(--color-bg-4);
+    margin: 7px;
+  }
+}
+
